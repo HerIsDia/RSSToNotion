@@ -60,7 +60,8 @@ if (feedsURL.length === 0) {
 // Get all the posts from the feedsURL with an interval
 
 const interval = 1000 * 60 * 60 * 24; // 1 day
-let articles: { Title: string; Priority: number; articles: FeedEntry[] }[] = [];
+const articles: { Title: string; Priority: number; articles: FeedEntry[] }[] =
+  [];
 for await (const feed of feedsURL) {
   const Title = feed?.Title as string;
   const URL = feed?.URL as string;
