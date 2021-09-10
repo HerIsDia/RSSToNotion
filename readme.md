@@ -41,18 +41,6 @@ Go to the project directory
   cd RSStoNotion
 ```
 
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
-
 ## Usage/Examples
 
 - You should use a Cron Job who will execute the code at an interval. (Recomanded: 1 Day)
