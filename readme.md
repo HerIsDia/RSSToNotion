@@ -24,7 +24,7 @@ To run this project, you will need to add the following environment variables to
 To deploy this project run
 
 ```bash
-  deno run --watch --allow-env --allow-read=.env,.env.defaults --allow-net index.ts
+  deno run --allow-env --allow-read=.env,.env.defaults --allow-net index.ts
 ```
 
 ## Run Locally
@@ -52,11 +52,6 @@ Start the server
 ```bash
   npm run start
 ```
-
-## Usage/Examples
-
-- You should use a Cron Job who will execute the code at an interval. (Recomanded: 1 Day)
-- In the `index.ts`, there's a const `interval` who you can set and match with the Cron Job Interval.
 
 ## Acknowledgements
 
