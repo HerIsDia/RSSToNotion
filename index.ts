@@ -101,7 +101,7 @@ const app = async () => {
     const filteredArticles = feedJSON.entries.filter(
       (article) =>
         article.published != undefined &&
-        article.published.getTime() >= Date.now() - (feed?.LastDate as number)
+        article.published.getTime() >= (feed?.LastDate as number)
     );
     articles.push({ Title, Priority, articles: [...filteredArticles] });
     const updateLastDate = await notion.pages.update({
@@ -121,7 +121,7 @@ const app = async () => {
   // Create a new post for each article in articles.
 
   for (const articleW of articles) {
-    const realArticle = articleW.articles;
+    const realArticle = [...new Set(articleW.articles)];
     for (const article of realArticle) {
       await notion.pages.create({
         parent: { database_id: postsDB as string },
