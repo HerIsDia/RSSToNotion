@@ -35,8 +35,8 @@ declare function addEventListener(
   options?: boolean | AddEventListenerOptions | undefined
 ): void;
 
-// Import the .env file.
-import 'https://deno.land/x/dotenv@v3.0.0/load.ts';
+// Import the .env file. (If needed.)
+// import 'https://deno.land/x/dotenv@v3.0.0/load.ts';
 
 // Create a new client instance.
 const notion = new Client({
